@@ -64,7 +64,7 @@
 	</dependencies>
 
 	<build>
-	<finalName>final-f2</finalName>
+	<finalName>final</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

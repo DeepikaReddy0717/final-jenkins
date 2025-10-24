@@ -41,13 +41,13 @@ pipeline {
         stage('Deploy Backend to Tomcat') {
     steps {
         bat '''
-        if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final-f2.war" (
-            del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final-f2.war"
+        if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final.war" (
+            del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final.war"
         )
-        if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final-f2" (
-            rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final-f2"
+        if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final" (
+            rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final"
         )
-        copy "STUDENTAPI-SPRINGBOOT\\target\\final-f2.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final-f2.war"
+        copy "STUDENTAPI-SPRINGBOOT\\target\\final.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\final.war"
         '''
     }
 }
